@@ -4,12 +4,11 @@ spend = 6000
 increase = 0.05
 
 month = 0  # количество месяцев, которое можно прожить
-grow = 1.05
-delta = salary - spend
-while money_capital + delta >= spend:
-    money_capital += delta
-    spend = spend * grow
-
+moneygrow = 1.05
+moneyspend = salary - spend
+while money_capital + moneyspend >= spend:
+    money_capital += moneyspend
+    spend = spend * moneygrow
     month += 1
 
 print(month)
